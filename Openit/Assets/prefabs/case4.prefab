@@ -203,9 +203,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 0}
   anim: {fileID: 4353764264721136036}
+  anim2: {fileID: 858983523472372665}
+  spinanim: {fileID: 0}
   gm: {fileID: 0}
   vle: {fileID: 0}
-  anim2: {fileID: 858983523472372665}
+  prize: {fileID: 0}
 --- !u!65 &2737255491423918756
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -343,8 +345,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.0152388, y: 2.0110664, z: 1.7929468}
+  m_Center: {x: -0.0048344135, y: 0.01241684, z: 0.06763506}
 --- !u!95 &858983523472372665
 Animator:
   serializedVersion: 3

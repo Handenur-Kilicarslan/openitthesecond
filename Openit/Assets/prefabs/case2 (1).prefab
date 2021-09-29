@@ -478,6 +478,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 
+  correctNumber: 
+  anim: {fileID: 0}
+  anim2: {fileID: 0}
+  spinanim: {fileID: 0}
+  gm: {fileID: 0}
+  vle: {fileID: 0}
+  text: {fileID: 0}
+  prize: {fileID: 0}
 --- !u!1 &2834364753455792247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,6 +1470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7499961433413022887}
+  - component: {fileID: 6128770424058609029}
   m_Layer: 0
   m_Name: case2 (1)
   m_TagString: Untagged
@@ -1498,6 +1507,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6128770424058609029
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7160415009288629789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8421421, y: 2.2619133, z: 1.92517}
+  m_Center: {x: 0.029652596, y: 0.0023155212, z: 0.094889164}
 --- !u!1 &7211368968513724712
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 147895522320595455}
-  - component: {fileID: 5855743151292870430}
   - component: {fileID: 866124981588017091}
+  - component: {fileID: 2579883364172182113}
   m_Layer: 0
   m_Name: case2 (2)
   m_TagString: case2
@@ -43,19 +43,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5855743151292870430
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668431177261671237}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.8723192, y: 2.268135, z: 1.8173532}
-  m_Center: {x: 0.04902315, y: -0.008468628, z: 0.10213423}
 --- !u!95 &866124981588017091
 Animator:
   serializedVersion: 3
@@ -75,6 +62,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2579883364172182113
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668431177261671237}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8797083, y: 2.2578506, z: 1.6211386}
+  m_Center: {x: 0.029668331, y: -0.003932953, z: -0.029298306}
 --- !u!1 &1012101281708600432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,6 +2249,7 @@ MonoBehaviour:
   correctNumber: 
   anim: {fileID: 8744236271066923394}
   anim2: {fileID: 866124981588017091}
+  spinanim: {fileID: 0}
   gm: {fileID: 0}
   vle: {fileID: 0}
   text: {fileID: 3607533186550658576}
