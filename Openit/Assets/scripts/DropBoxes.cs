@@ -25,6 +25,7 @@ public class DropBoxes : MonoBehaviour
       box.GetComponent<TPtoboxLocation>().vc1 = vc1;
       box.GetComponent<TPtoboxLocation>().vc2 = vc2;
       prize = Instantiate(prizes[Random.Range(0, prizes.Length)],box.transform);
+
       if (box.GetComponentInChildren<rotateCase>() != null) { 
         box.GetComponentInChildren<rotateCase>().joystick = joystick;
         box.GetComponentInChildren<rotateCase>().enabled = false;
