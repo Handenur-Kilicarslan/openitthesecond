@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
   public Text text;
   public GameObject winpanel;
   public Animator winpanelanim;
+  public ParticleSystem confetti;
 
   void Start()
   {
@@ -18,16 +19,11 @@ public class GameManager : MonoBehaviour
     text.text = money.ToString();
   }
 
-  // Update is called once per frame
-  void Update()
-  {
-        
-  }
-
 	public void win(value vle)
   {
     winpanel.SetActive(true);
     winpanelanim.SetBool("win", true);
+    confetti.Play();
 
     money += vle.mvalue;
     PlayerPrefs.SetInt("money", money);
