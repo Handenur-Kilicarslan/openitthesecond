@@ -11,6 +11,7 @@ TagManager:
   - kapak
   - case1
   - case2
+  - puzzlePiece
   layers:
   - Default
   - TransparentFX
