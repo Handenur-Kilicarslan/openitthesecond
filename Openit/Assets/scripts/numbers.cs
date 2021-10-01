@@ -13,6 +13,7 @@ public class numbers : MonoBehaviour
 	public GameManager gm;
 	public value vle;
 	public Text text;
+	public Text boxtext;
 	public GameObject prize;
 
 	bool won;
@@ -26,6 +27,7 @@ public class numbers : MonoBehaviour
 
 	private void Update()
 	{
+		boxtext.text = number;
 		if(number == correctNumber && won != true)
 		{
 			prize.transform.parent = null;
@@ -38,11 +40,12 @@ public class numbers : MonoBehaviour
 
 	IEnumerator _win()
 	{
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(1.5f);
 		anim2.SetBool("win", true);
-		gm.win(vle);
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(0.75f);
 		spinanim.SetBool("win", true);
+		yield return new WaitForSeconds(0.75f);
+		gm.win(vle);
 
 	}
 }
