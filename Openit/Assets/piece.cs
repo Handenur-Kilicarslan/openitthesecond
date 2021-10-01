@@ -13,7 +13,7 @@ public class piece : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myRigidbody = GetComponent<Rigidbody>();
+        //myRigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class piece : MonoBehaviour
         myRigidbody.AddForce(movement);
         */
 
-        //movementi kodla
+        /*movementi kodla
         movement = new Vector3(x, 0, 0);
         myRigidbody.AddForce(movement);
 
@@ -38,6 +38,8 @@ public class piece : MonoBehaviour
         {
             myRigidbody.AddForce(-movement);
         }
+        
+    */
     }
 
 
