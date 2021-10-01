@@ -14,6 +14,7 @@ public class piece : MonoBehaviour
     void Start()
     {
         //myRigidbody = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
@@ -41,6 +42,4 @@ public class piece : MonoBehaviour
         
     */
     }
-
-
 }

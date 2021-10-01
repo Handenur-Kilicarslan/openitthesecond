@@ -4236,7 +4236,7 @@ PrefabInstance:
     - target: {fileID: 6263866568887889684, guid: bd93eb65746c79b43b099af5152c92f8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1072
+      value: 1499
       objectReference: {fileID: 0}
     - target: {fileID: 6263866568887889685, guid: bd93eb65746c79b43b099af5152c92f8,
         type: 3}
@@ -5788,6 +5788,7 @@ GameObject:
   - component: {fileID: 1993946240}
   - component: {fileID: 1993946239}
   - component: {fileID: 1993946242}
+  - component: {fileID: 1993946243}
   m_Layer: 0
   m_Name: CM vcam1 (1)
   m_TagString: cam
@@ -5872,6 +5873,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
+  target: {fileID: 0}
+--- !u!114 &1993946243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993946238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9a0f5955544494b8a450ecc93ce1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 258280253}
   target: {fileID: 0}
 --- !u!1 &1997420798 stripped
 GameObject:
