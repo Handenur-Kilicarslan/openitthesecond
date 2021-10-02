@@ -9,37 +9,26 @@ public class piece : MonoBehaviour
     public float speed = 100f;
 
     public float x = 100f;
+    public int foo = 1;
 
-    // Start is called before the first frame update
-    void Start()
+   
+    private void OnMouseDrag()
     {
-        //myRigidbody = GetComponent<Rigidbody>();
-
+        //Debug.Log(name + "was clicked");
+        //Debug.Log(transform.position);
+        if(gameObject.tag == "puzzlePiece")
+        {
+            transform.Translate(Vector3.left * Time.deltaTime);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        /*
-        x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        movement = new Vector3(x, 0, 0);
-        myRigidbody.AddForce(movement);
-        */
-
-        /*movementi kodla
-        movement = new Vector3(x, 0, 0);
-        myRigidbody.AddForce(movement);
-
-        if (Input.GetAxis("Mouse X") < 0)
+        if(Input.GetMouseButtonDown(0)) //sol tık yaptıysak
         {
-            Debug.Log("sağa mı bacım");
-            myRigidbody.AddForce(movement);
+            speed = 100f;
         }
-        if (Input.GetAxis("Mouse X") > 0)
-        {
-            myRigidbody.AddForce(-movement);
-        }
-        
-    */
+
+        Debug.Log(foo);
     }
 }
