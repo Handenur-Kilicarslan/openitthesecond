@@ -29,6 +29,6 @@ public class piece : MonoBehaviour
             speed = 100f;
         }
 
-        Debug.Log(foo);
+        //Debug.Log(foo);
     }
 }
