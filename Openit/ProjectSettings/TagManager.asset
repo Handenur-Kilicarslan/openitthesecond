@@ -12,6 +12,8 @@ TagManager:
   - case1
   - case2
   - puzzlePiece
+  - Empty
+  - Full
   layers:
   - Default
   - TransparentFX
