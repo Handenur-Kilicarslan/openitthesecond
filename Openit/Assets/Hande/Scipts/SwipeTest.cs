@@ -51,9 +51,10 @@ public class SwipeTest : MonoBehaviour
         if (swipeControls.SwipeLeft)  //2 swipe çalışmıyor ?
         {
             LeftSwp(invisiblePlayer);
+
+            Debug.Log(canSwipe + " canswipe değeri");
             if (canSwipe == true)
             {
-                Debug.Log("KARDEŞİM BENİ GÖRMÜYON MU");
                 StartCoroutine(WaitForSwipe());
                 LeftSwp(player);
                 canSwipe = false;
@@ -61,11 +62,13 @@ public class SwipeTest : MonoBehaviour
         }
         if (swipeControls.SwipeRight)
         {
-            RightSwp(invisiblePlayer);
+            StartCoroutine(RightSwpIE(invisiblePlayer));
+            Debug.Log(canSwipe + " canswipe değeri");
+            
             if (canSwipe == true)
             {
                 StartCoroutine(WaitForSwipe());
-                RightSwp(player);
+                RightSwp(player); //
                 canSwipe = false;
             }
         }
@@ -74,7 +77,7 @@ public class SwipeTest : MonoBehaviour
             UpSwp(invisiblePlayer);
             if (canSwipe == true)
             {
-                StartCoroutine(WaitForSwipe()); WaitForSwipe();
+                StartCoroutine(WaitForSwipe()); 
                 UpSwp(player);
                 canSwipe = false;
             }
@@ -104,6 +107,13 @@ public class SwipeTest : MonoBehaviour
         player.transform.DOMoveX(desiredPosition, 0.5f);
     }
 
+    IEnumerator RightSwpIE(Transform player)
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        player.transform.DOMoveX(desiredPosition, 0.5f);
+    }
+
     void UpSwp(Transform player)
     {
 
@@ -117,7 +127,7 @@ public class SwipeTest : MonoBehaviour
 
     public IEnumerator WaitForSwipe()
     {
-        yield return new WaitForSeconds(0.0f);
+        yield return new WaitForSeconds(0.1f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -125,14 +135,13 @@ public class SwipeTest : MonoBehaviour
         if (other.gameObject.tag == "Empty")
         {
             Debug.Log(other.name + " is " + other.tag);
-            Debug.Log(name + " objesi empty kısmına dokundu ");
 
             other.gameObject.tag = "Full";
 
-            Debug.Log(other.name + " is " + other.tag);
             canSwipe = true;
         }
     }
+    //nce bool true snra hareke
 
 
 }
