@@ -8,18 +8,30 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public int money;
-    public Text text;
+    public Text textMoney;
     public GameObject winpanel;
     public Animator winpanelanim;
     public ParticleSystem confetti;
-
+    public GameObject joyStick;
     public Text priceTxt;
+
+    public static GameManager instance;
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
         money = PlayerPrefs.GetInt("money");
-        text.text = money.ToString();
+        textMoney.text = money.ToString();
         
+    }
+
+    public void NextLevel()
+    {
+        Debug.Log("Next Level");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void win(value vle)
@@ -28,11 +40,15 @@ public class GameManager : MonoBehaviour
         winpanelanim.SetBool("win", true);
         confetti.Play();
 
+        joyStick.SetActive(false);
+
+
         money += vle.mvalue;
 
-        priceTxt.text = vle.mvalue.ToString() + " $";
+        priceTxt.text = vle.mvalue.ToString();
 
         PlayerPrefs.SetInt("money", money);
-        text.text = money.ToString();
+        textMoney.text = money.ToString();
+
     }
 }
