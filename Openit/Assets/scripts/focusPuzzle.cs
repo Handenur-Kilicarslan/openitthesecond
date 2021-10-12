@@ -22,7 +22,7 @@ public class focusPuzzle : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, 0.01f);
-        if (Input.GetKeyDown(KeyCode.Mouse1) == true)
+        if (Input.GetKeyDown(KeyCode.Mouse0) == true)
         {
             GameObject.FindWithTag("cam").GetComponent<rotateCam>().enabled = true;
             targetPosition = mainPosition;

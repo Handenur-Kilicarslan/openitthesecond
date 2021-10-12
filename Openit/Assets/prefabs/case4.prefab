@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3944323244838563097}
   - component: {fileID: 5781635612317612221}
   - component: {fileID: 491826590}
-  - component: {fileID: 491826589}
+  - component: {fileID: 4077327987386325680}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: kapak
@@ -95,7 +95,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.02, z: 0.020000001}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &491826589
+--- !u!114 &4077327987386325680
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 485345423406908423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea0ec6ecec3e9a4d932430d846e9510, type: 3}
+  m_Script: {fileID: 11500000, guid: 11b876b1787a107428373081194e2e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   used: 0
