@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     {
         money = PlayerPrefs.GetInt("money");
         textMoney.text = money.ToString();
-        
+
     }
 
     public void NextLevel()
