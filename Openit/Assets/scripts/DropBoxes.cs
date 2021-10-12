@@ -42,6 +42,7 @@ public class DropBoxes : MonoBehaviour
                 box.GetComponentInChildren<numbers>().prize = prize;
                 box.GetComponentInChildren<numbers>().spinanim = prize.GetComponent<Animator>();
                 box.GetComponentInChildren<numbers>().vle = prize.GetComponent<value>();
+
             }
         }
     }

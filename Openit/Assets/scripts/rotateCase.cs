@@ -43,6 +43,6 @@ public class rotateCase : MonoBehaviour
         yield return new WaitForSeconds(0.75f);
         spinanim.SetBool("win", true);
         yield return new WaitForSeconds(0.75f);
-        gm.win(vle);
+        gm.Win(vle);
     }
 }
