@@ -90,9 +90,12 @@ public class GameManager : MonoBehaviour
 
     public void Win(value vle)
     {
+        Debug.Log("Bakalım Burası çalışıyor mu");
+
         winpanel.SetActive(true);
 
         winpanelanim.SetBool("win", true);
+
         confetti.Play();
 
         joyStick.SetActive(false);

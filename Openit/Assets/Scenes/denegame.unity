@@ -366,9 +366,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2596e7fe310cfc740871cefcbbba7e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels: []
+  levels:
+  - {fileID: 11400000, guid: b1c648109adeedd43b0915a012a883af, type: 2}
   status: 0
   whichLevel: 0
+  gameArea: {fileID: 0}
   money: 0
   textMoney: {fileID: 3981774960128746514}
   winpanel: {fileID: 3981774959679401739}
@@ -439,6 +441,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4744707544913667246, guid: e6b1a36181adf3f46a78e7418d146bc1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8546298708829612326, guid: e6b1a36181adf3f46a78e7418d146bc1,
         type: 3}
       propertyPath: m_RootOrder
@@ -498,6 +505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8546298708829615833, guid: e6b1a36181adf3f46a78e7418d146bc1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6b1a36181adf3f46a78e7418d146bc1, type: 3}
