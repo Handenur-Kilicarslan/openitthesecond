@@ -6,7 +6,14 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Single Scene Data")]
+    public Levels[] levels;
+    public GameStatus status = GameStatus.empty;
+    public int whichLevel = 0;
+
+    public GameObject gameArea;
+
+    [Header("Level Info")]
     public int money;
     public Text textMoney;
     public GameObject winpanel;
@@ -28,15 +35,63 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void NextLevel()
+    void Update()
     {
-        Debug.Log("Next Level");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        switch (status)
+        {
+            case GameStatus.empty:
+                whichLevel = PlayerPrefs.GetInt("whichLevel");
+
+                if (PlayerPrefs.GetInt("randomLevel") > 0)
+                {
+                    whichLevel = Random.Range(0, levels.Length);
+                }
+
+                gameArea = Instantiate(levels[whichLevel].LevelObj, new Vector3(-1.57f, -2.3f, -8.6f), Quaternion.identity);
+                
+                status = GameStatus.initalize;
+
+
+                break;
+            case GameStatus.initalize:
+                break;
+            case GameStatus.start:
+                break;
+            case GameStatus.stay:
+                break;
+            case GameStatus.restart:
+                break;
+            case GameStatus.next:
+                break;
+        }
     }
 
-    public void win(value vle)
+
+    public void NextLevel()
+    {
+        whichLevel++;
+        PlayerPrefs.SetInt("whichLevel", whichLevel);
+
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+
+        //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        /*buildIndex'i tutturuyotuz.
+         * Olası farklı senaryolarda -next level olmayışı gibi- sıkıntı çıkarmasın diye */
+
+        //iceCubeCount = 0;// next level için küp sayısını 0'ladım.
+        status = GameStatus.empty; // tekrar empty'e çekiyoruz.
+
+        if (whichLevel >= levels.Length)
+        {
+            whichLevel--;
+            PlayerPrefs.SetInt("randomLevel", 1);
+        }
+    }
+
+    public void Win(value vle)
     {
         winpanel.SetActive(true);
+
         winpanelanim.SetBool("win", true);
         confetti.Play();
 

@@ -24,6 +24,7 @@ public class numbers : MonoBehaviour
         correctNumber = Random.Range(1000, 9999).ToString();
         text.text = correctNumber.ToString();
         won = false;
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void Update()
@@ -46,7 +47,7 @@ public class numbers : MonoBehaviour
         yield return new WaitForSeconds(0.75f);
         spinanim.SetBool("win", true);
         yield return new WaitForSeconds(0.75f);
-        gm.win(vle);
+        gm.Win(vle);
 
     }
 }
