@@ -325,7 +325,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2793230823610391289}
-  - component: {fileID: 9076635386491645881}
   - component: {fileID: 4869096397499485673}
   m_Layer: 0
   m_Name: gramafon (1)
@@ -358,19 +357,6 @@ Transform:
   m_Father: {fileID: 3854829366779370324}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9076635386491645881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3280973544045428803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f188160b4f3b66744b36ed4691711da6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mvalue: 100
 --- !u!95 &4869096397499485673
 Animator:
   serializedVersion: 3
@@ -400,6 +386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3854829366779370324}
   - component: {fileID: 1314726272639499392}
+  - component: {fileID: 7916200097383876234}
   m_Layer: 0
   m_Name: Gramafon orj
   m_TagString: Untagged
@@ -441,6 +428,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7916200097383876234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854829366779370325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f188160b4f3b66744b36ed4691711da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mvalue: 100
 --- !u!1 &6300104927520300065
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     public GameObject winpanel;
     public Animator winpanelanim;
     public ParticleSystem confetti;
-    public GameObject joyStick;
     public Text priceTxt;
 
     public static GameManager instance;
@@ -48,8 +47,10 @@ public class GameManager : MonoBehaviour
                 }
 
                 gameArea = Instantiate(levels[whichLevel].LevelObj, new Vector3(-1.57f, -2.3f, -8.6f), Quaternion.identity);
-                
-                status = GameStatus.initalize;
+                gameArea.GetComponentInChildren<DropBoxes>().gm = this;
+
+
+        status = GameStatus.initalize;
 
 
                 break;
@@ -90,17 +91,18 @@ public class GameManager : MonoBehaviour
 
     public void Win(value vle)
     {
+    Debug.Log("working");
+
+    GameObject.FindGameObjectWithTag("joystick").SetActive(false);
+          
         winpanel.SetActive(true);
 
         winpanelanim.SetBool("win", true);
         confetti.Play();
 
-        joyStick.SetActive(false);
-
-
         money += vle.mvalue;
 
-        priceTxt.text = vle.mvalue.ToString();
+        //priceTxt.text = vle.mvalue.ToString();
 
         PlayerPrefs.SetInt("money", money);
         textMoney.text = money.ToString();
