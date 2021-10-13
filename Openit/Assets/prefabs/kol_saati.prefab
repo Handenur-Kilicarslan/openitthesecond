@@ -90,6 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1654891168671373802}
   - component: {fileID: -8644563400236425165}
+  - component: {fileID: 2242762693885594047}
   m_Layer: 0
   m_Name: kol_saati
   m_TagString: Untagged
@@ -136,6 +137,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2242762693885594047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142739338543678288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f188160b4f3b66744b36ed4691711da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mvalue: 150
 --- !u!1 &2577405184059699201
 GameObject:
   m_ObjectHideFlags: 0

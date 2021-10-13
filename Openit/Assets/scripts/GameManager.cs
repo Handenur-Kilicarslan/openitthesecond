@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
     public GameObject joyStick;
     public Text priceTxt;
 
+    private GameObject joystickInScene;
+    private GameObject winPanelInScene; //kapaılacak olan
+    private GameObject buCanvas; //komple canvas kapıyorum haydi bakalım
+
     public static GameManager instance;
     private void Awake()
     {
@@ -48,7 +52,12 @@ public class GameManager : MonoBehaviour
                 }
 
                 gameArea = Instantiate(levels[whichLevel].LevelObj, new Vector3(-1.57f, -2.3f, -8.6f), Quaternion.identity);
-                
+
+                joystickInScene = gameArea.transform.GetChild(0).transform.GetChild(0).gameObject;
+               
+
+                buCanvas = gameArea.transform.GetChild(0).gameObject;
+
                 status = GameStatus.initalize;
 
 
@@ -92,11 +101,15 @@ public class GameManager : MonoBehaviour
     {
         winpanel.SetActive(true);
 
+        buCanvas.SetActive(false);
+
         winpanelanim.SetBool("win", true);
+        winPanelInScene.SetActive(false);
         confetti.Play();
-
+        
         joyStick.SetActive(false);
-
+        joystickInScene.SetActive(false);
+        
 
         money += vle.mvalue;
 

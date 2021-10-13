@@ -18,6 +18,7 @@ public class rotateCase : MonoBehaviour
     {
         won = false;
         won = false;
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void Update()
