@@ -12,7 +12,7 @@ public class numbers : MonoBehaviour
     public Animator anim2;
     public Animator spinanim;
     public GameManager gm;
-    public value vle;
+    public Value vle;
     public Text text;
     public Text boxtext;
     public GameObject prize;
@@ -42,6 +42,7 @@ public class numbers : MonoBehaviour
 
     IEnumerator _win()
     {
+        Debug.Log(prize.GetComponent<Value>().mvalue);
         yield return new WaitForSeconds(1.5f);
         anim2.SetBool("win", true);
         yield return new WaitForSeconds(0.75f);

@@ -9,7 +9,7 @@ public class rotateCase : MonoBehaviour
     public Animator anim2;
     public Animator spinanim;
     public GameManager gm;
-    public value vle;
+    public Value vle;
     public GameObject prize;
 
     bool won;

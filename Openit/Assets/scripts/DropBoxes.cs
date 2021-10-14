@@ -34,14 +34,14 @@ public class DropBoxes : MonoBehaviour
                 box.GetComponentInChildren<rotateCase>().gm = gm;
                 box.GetComponentInChildren<rotateCase>().prize = prize;
                 box.GetComponentInChildren<rotateCase>().spinanim = prize.GetComponent<Animator>();
-                box.GetComponentInChildren<rotateCase>().vle = prize.GetComponent<value>();
+                box.GetComponentInChildren<rotateCase>().vle = prize.GetComponent<Value>();
             }
             if (box.GetComponentInChildren<numbers>() != null)
             {
                 box.GetComponentInChildren<numbers>().gm = gm;
                 box.GetComponentInChildren<numbers>().prize = prize;
                 box.GetComponentInChildren<numbers>().spinanim = prize.GetComponent<Animator>();
-                box.GetComponentInChildren<numbers>().vle = prize.GetComponent<value>();
+                box.GetComponentInChildren<numbers>().vle = prize.GetComponent<Value>();
 
             }
         }

@@ -19,10 +19,10 @@ public class GameManager : MonoBehaviour
     public GameObject winpanel;
     public Animator winpanelanim;
     public ParticleSystem confetti;
-    public Text priceTxt;
+    public Text allMoney;
 
+    private GameObject joyStick;
     private GameObject joystickInScene;
-    private GameObject winPanelInScene; //kapaılacak olan
     private GameObject buCanvas; //komple canvas kapıyorum haydi bakalım
 
     public static GameManager instance;
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         money = PlayerPrefs.GetInt("money");
-        textMoney.text = money.ToString();
+        allMoney.text = money.ToString();
 
     }
 
@@ -54,11 +54,11 @@ public class GameManager : MonoBehaviour
 
 
                 joystickInScene = gameArea.transform.GetChild(0).transform.GetChild(0).gameObject;
-               
+
 
                 buCanvas = gameArea.transform.GetChild(0).gameObject;
 
-              
+
 
                 gameArea.GetComponentInChildren<DropBoxes>().gm = this;
 
@@ -102,31 +102,29 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Win(value vle)
+    public void Win(Value vle)
     {
-    Debug.Log("working");
+        Debug.Log("working");
 
-    GameObject.FindGameObjectWithTag("joystick").SetActive(false);
-          
+        GameObject.FindGameObjectWithTag("joystick").SetActive(false);
+
         winpanel.SetActive(true);
 
         buCanvas.SetActive(false);
 
         winpanelanim.SetBool("win", true);
-        winPanelInScene.SetActive(false);
         confetti.Play();
-
-        joyStick.SetActive(false);
+        
         joystickInScene.SetActive(false);
+
+
+        textMoney.text = vle.mvalue.ToString();
+        money += vle.mvalue;
         
 
-
-        money += vle.mvalue;
-
-        //priceTxt.text = vle.mvalue.ToString();
-
         PlayerPrefs.SetInt("money", money);
-        textMoney.text = money.ToString();
+
+        allMoney.text = money.ToString();
 
     }
 }
