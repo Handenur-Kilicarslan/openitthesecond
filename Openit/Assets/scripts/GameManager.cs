@@ -10,8 +10,14 @@ public class GameManager : MonoBehaviour
     public Levels[] levels;
     public GameStatus status = GameStatus.empty;
     public int whichLevel = 0;
+    private GameObject gameArea;
 
-    public GameObject gameArea;
+    [Header("Exp. Panels")]
+    public GameObject PlayingPanel;
+    public GameObject startPanel;
+    public GameObject swipeLeftPanel;
+    public GameObject swipeUpPanel;
+
 
     [Header("Level Info")]
     public int money;
@@ -25,6 +31,8 @@ public class GameManager : MonoBehaviour
     private GameObject joystickInScene;
     private GameObject buCanvas; //komple canvas kapıyorum haydi bakalım
 
+    private float timeLapse = 0;
+
     public static GameManager instance;
     private void Awake()
     {
@@ -33,6 +41,13 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Şu Leveldesiniz: " + whichLevel);
+        if (whichLevel == 0)
+        {
+            StartCoroutine(StartThePanel());
+            // StartThePanel();
+
+        }
         money = PlayerPrefs.GetInt("money");
         allMoney.text = money.ToString();
 
@@ -40,6 +55,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+
+
         switch (status)
         {
             case GameStatus.empty:
@@ -102,6 +119,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void ContinueGame()
+    {
+        Time.timeScale = 1;
+    }
+
     public void Win(Value vle)
     {
         Debug.Log("working");
@@ -114,17 +141,56 @@ public class GameManager : MonoBehaviour
 
         winpanelanim.SetBool("win", true);
         confetti.Play();
-        
+
         joystickInScene.SetActive(false);
 
 
         textMoney.text = vle.mvalue.ToString();
         money += vle.mvalue;
-        
+
 
         PlayerPrefs.SetInt("money", money);
 
         allMoney.text = money.ToString();
 
     }
+
+    IEnumerator StartThePanel()
+    {
+
+        PlayingPanel.SetActive(false);
+
+        startPanel.SetActive(true);
+
+        yield return new WaitForSeconds(5f);
+
+        startPanel.GetComponent<Animation>().enabled = true;
+
+        yield return new WaitForSeconds(1f);
+
+        startPanel.SetActive(false);
+        PlayingPanel.SetActive(true);
+    }
+
+
+    /* public void StartThePanel()
+     {
+
+         PlayingPanel.SetActive(false);
+
+         startPanel.SetActive(true);
+
+         if (timeLapse >= 4)
+         {
+             startPanel.GetComponent<Animation>().enabled = true;
+         }
+         if (timeLapse >= 6)
+         {
+             startPanel.SetActive(false);
+         }
+
+         PlayingPanel.SetActive(true);
+     }
+     */
+
 }

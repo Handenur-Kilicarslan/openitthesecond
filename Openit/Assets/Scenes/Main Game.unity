@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4385992, g: 0.486719, b: 0.5669902, a: 1}
+  m_IndirectSpecularColor: {r: 0.44033083, g: 0.488899, b: 0.5690673, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3393,7 +3393,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3449,13 +3449,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906345841}
-  m_LocalRotation: {x: 0.5841966, y: -0.20611665, z: 0.15653498, w: 0.76923794}
+  m_LocalRotation: {x: 0.69148093, y: -0.05683729, z: 0.32182932, w: 0.6442434}
   m_LocalPosition: {x: -0.8149681, y: 4.9333725, z: -1.2697678}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 74.43, y: -30.000002, z: 0}
+  m_LocalEulerAnglesHint: {x: 111.944, y: -95.72, z: -64.065}
 --- !u!1 &907108216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8700725330082129686, guid: ca2718eb8ffa96e489e311eef04a8ef7,
@@ -4689,14 +4689,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: bd9573144c1c719489f92a7e56f0fac6, type: 3}
+    m_Font: {fileID: 12800000, guid: 305791a149eb02f499f3690e300262ae, type: 3}
     m_FontSize: 68
     m_FontStyle: 0
     m_BestFit: 0
@@ -4708,7 +4708,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 1000
 --- !u!222 &1638427988
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4733,8 +4733,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 315.1, y: 831.6}
-  m_SizeDelta: {x: 356.2122, y: 108.482544}
+  m_AnchoredPosition: {x: 296.9, y: 838.83}
+  m_SizeDelta: {x: 392.5289, y: 122.93277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1640678564 stripped
 GameObject:
@@ -6458,7 +6458,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: bd9573144c1c719489f92a7e56f0fac6, type: 3}
+    m_Font: {fileID: 12800000, guid: 305791a149eb02f499f3690e300262ae, type: 3}
     m_FontSize: 56
     m_FontStyle: 0
     m_BestFit: 0
@@ -6652,7 +6652,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: bd9573144c1c719489f92a7e56f0fac6, type: 3}
+    m_Font: {fileID: 12800000, guid: 305791a149eb02f499f3690e300262ae, type: 3}
     m_FontSize: 71
     m_FontStyle: 0
     m_BestFit: 0
@@ -7110,7 +7110,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: bd9573144c1c719489f92a7e56f0fac6, type: 3}
+    m_Font: {fileID: 12800000, guid: 305791a149eb02f499f3690e300262ae, type: 3}
     m_FontSize: 104
     m_FontStyle: 0
     m_BestFit: 0
