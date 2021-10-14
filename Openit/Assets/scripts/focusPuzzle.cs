@@ -6,6 +6,7 @@ using UnityEngine;
 public class focusPuzzle : MonoBehaviour
 {
     public GameObject target;
+  public DynamicJoystick joystick;
 
     GameObject main;
     Vector3 targetPosition;
@@ -22,7 +23,7 @@ public class focusPuzzle : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, 0.01f);
-        if (Input.GetKeyDown(KeyCode.Mouse0) == true)
+        if (joystick != null && joystick.Horizontal < 0)
         {
             GameObject.FindWithTag("cam").GetComponent<rotateCam>().enabled = true;
             targetPosition = mainPosition;
@@ -33,4 +34,6 @@ public class focusPuzzle : MonoBehaviour
             Destroy(this, 3f);
         }
     }
+
+  
 }
